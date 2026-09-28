@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 client=OpenAI(api_key=os.getenv("DEEPSEEK_API_KEY"),
               base_url="https://api.deepseek.com")
-st.title=("多模型对话|System Prompt切换")
+st.title("多模型对话|System Prompt切换")
 # 侧边栏配置
 with st.sidebar:#st.sidebar代表网页左侧侧边栏，with语法表示下面所有组件都放在侧边栏内。
     st.header("⚙️ 参数配置")
@@ -40,7 +40,7 @@ if user_input:
         messages=messages
     )
     ai_content=resp.choices[0].message.content
-    st.session_state.history.append({"role":"assisant","content":ai_content})
+    st.session_state.history.append({"role":"assistant","content":ai_content})
 #显示
 for msg in st.session_state.history:
     with st.chat_message(msg["role"]):#创建聊天气泡。
