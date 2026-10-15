@@ -28,8 +28,7 @@ print(model.wv["机器"])
 print("\n=== 两个词相似度 ===")
 print(model.wv.similarity("人工智能","机器"))
 
-import jieba
-from gensim.models import Word2Vec
+
 
 # 读取本地txt文本
 # with open("article.txt", "r", encoding="utf-8") as f:

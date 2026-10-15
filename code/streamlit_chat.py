@@ -12,7 +12,7 @@ with st.sidebar:#st.sidebar代表网页左侧侧边栏，with语法表示下面�
     # 模型下拉选择
     selected_model=st.selectbox(
         "选择模型",
-        options=["deepseek-chat","deepseek-code"],
+        options=["deepseek-chat","deepseek-reasoner"],
         index=0#默认选中第一个deepseek-chat
     )#用户选中的模型名称，保存到变量selected_model，后续传给 API。
     # System Prompt输入框
